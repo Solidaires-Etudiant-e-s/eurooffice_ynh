@@ -88,9 +88,9 @@ arbitrary-limitations.fr = "La version officielle d'OnlyOffice limite le nombre 
     autoupdate.asset.arm64 = "^onlyoffice-documentserver_arm64.deb$"
     autoupdate.strategy = "latest_github_release"
     
-    [resources.sources.src]
-    url = "https://github.com/ONLYOFFICE/server/archive/refs/tags/v9.3.0.133.tar.gz"
-    sha256 = "a3d1c84624260c60334e9364b559c18cc1435fbc4ff891f81486f3bc5e571d00"
+[resources.sources.src]
+    url = "https://github.com/ONLYOFFICE/server/archive/d6df308acb9877a9365c741b30741de96202816e.tar.gz"
+    sha256 = "22b46c4976b686add17016a53466adcff18ac24fdacab1782f43be77556f5c0a"
     # Autoupdater disabled because keeps failing everyday, because no tag found after sanity filtering
     # autoupdate.strategy = "latest_github_tag"
     # autoupdate.version_regex = "^v9.*$"
