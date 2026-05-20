@@ -19,7 +19,7 @@ code = "https://github.com/ONLYOFFICE/DocumentServer"
 cpe = "cpe:2.3:a:onlyoffice:document_server"
 
 [integration]
-yunohost = ">= 12.1.32"
+yunohost = ">= 12.1.39"
 helpers_version = "2.1"
 architectures = ["amd64", "arm64"]
 multi_instance = true
@@ -78,10 +78,10 @@ arbitrary-limitations.fr = "La version officielle d'OnlyOffice limite le nombre 
 [resources]
 
     [resources.sources.main]
-    amd64.url = "https://github.com/ONLYOFFICE/DocumentServer/releases/download/v9.3.1/onlyoffice-documentserver_amd64.deb"
-    amd64.sha256 = "b206c7eefcf3750605d6d3f61a95f81c2ecaf931f4855f004bfd1d4d05269817"
-    arm64.url = "https://github.com/ONLYOFFICE/DocumentServer/releases/download/v9.3.1/onlyoffice-documentserver_arm64.deb"
-    arm64.sha256 = "3640452eca27ee29f72d2600f9aa278c6849a145ac8c91249483d9bf33f2c0a6"
+    amd64.url = "https://github.com/ONLYOFFICE/DocumentServer/releases/download/v9.4.0/onlyoffice-documentserver_amd64.deb"
+    amd64.sha256 = "0860e68c4fecf429b4e13602a4a5ec6945e6ec9f0e9af9867ef0171845aa07df"
+    arm64.url = "https://github.com/ONLYOFFICE/DocumentServer/releases/download/v9.4.0/onlyoffice-documentserver_arm64.deb"
+    arm64.sha256 = "5bbe4194d91b1812020ef9fca25da705212ca9b89f668851ffffecd15b482623"
     extract = false
     rename = "onlyoffice-documentserver.deb"
     autoupdate.asset.amd64 = "^onlyoffice-documentserver_amd64.deb$"
