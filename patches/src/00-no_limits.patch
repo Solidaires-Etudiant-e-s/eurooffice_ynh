@@ -19,7 +19,7 @@ diff --git a/Common/sources/license.js b/Common/sources/license.js
 index d43ee210..c0f63d4b 100644                                    
 --- a/Common/sources/license.js     
 +++ b/Common/sources/license.js   
-@@ -48,22 +48,23 @@
+@@ -48,22 +48,22 @@
      {
        count: 1,
        type: c_LR.Success,
@@ -28,8 +28,8 @@ index d43ee210..c0f63d4b 100644
        mode: constants.LICENSE_MODE.None,
 -      branding: false,
 +      branding: true,
-       connections: constants.LICENSE_CONNECTIONS,
-       connectionsView: constants.LICENSE_CONNECTIONS,
+       connections: constants.LICENSE_CONNECTIONS_OS,
+       connectionsView: constants.LICENSE_CONNECTIONS_OS,
 -      customization: false,
 -      advancedApi: false,
 -      usersCount: 0,
@@ -41,7 +41,6 @@ index d43ee210..c0f63d4b 100644
        usersExpire: constants.LICENSE_EXPIRE_USERS_ONE_DAY,
 -      hasLicense: false,
 +      hasLicense: true,
-+      plugins: true,
        buildDate: oBuildDate,
        startDate,
 -      endDate: null,
@@ -52,9 +51,6 @@ index d43ee210..c0f63d4b 100644
        multitenancy: false
      },
      null
-  ];
- };
-
 diff --git a/Common/sources/tenantManager.js b/Common/sources/tenantManager.js
 index 703c81d2..898296be 100644
 --- a/Common/sources/tenantManager.js
