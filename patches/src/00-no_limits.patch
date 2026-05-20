@@ -79,7 +79,7 @@ diff --git a/DocService/sources/server.js b/DocService/sources/server.js
 index 150dca50..3b40b35e 100644
 --- a/DocService/sources/server.js
 +++ b/DocService/sources/server.js
-@@ -141,8 +141,6 @@ if (!(cfgTokenEnableBrowser && cfgTokenEnableRequestInbox && cfgTokenEnableReque
+@@ -147,8 +147,6 @@
  }
  
  updateLicense();
@@ -87,20 +87,7 @@ index 150dca50..3b40b35e 100644
 -setInterval(updateLicense, 86400000);
  
  try {
- 	let staticContent = config.get('services.CoAuthoring.server.static_content');
-diff --git a/FileConverter/sources/convertermaster.js b/FileConverter/sources/convertermaster.js
-index 2209e8c9..37e71847 100644
---- a/FileConverter/sources/convertermaster.js
-+++ b/FileConverter/sources/convertermaster.js
-@@ -102,6 +102,8 @@
- 
-     updateLicense();
- 
-+    fs.watchFile(cfgLicenseFile, updateLicense);
-+    setInterval(updateLicense, 86400000);
-   }
- } else {
-   const converter = require('./converter');
+   const staticContent = config.get('services.CoAuthoring.server.static_content');
 diff --git a/Makefile b/Makefile
 index e8e1308f..23f7e2ef 100644
 --- a/Makefile
