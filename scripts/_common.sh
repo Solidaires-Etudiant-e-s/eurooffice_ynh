@@ -79,7 +79,7 @@ setup_sources() {
         ynh_setup_source --source_id="src" --dest_dir="$install_dir/src"
         ynh_replace --match="const buildVersion = " --replace="const buildVersion = '${YNH_APP_MANIFEST_VERSION%%~*}';" --file="$install_dir/src/Common/sources/commondefines.js"
     buildNumber=$(ynh_read_manifest "resources.sources.src.url"| sed "s/\.tar\.gz//" | grep -Eo "[0-9]+$")
-        ynh_replace --match="const buildNumber = " --replace="const buildNumber = $buildNumber;" --file="$install_dir/src/Common/sources/commondefines.js"
+        ynh_replace --match="const buildNumber = " --replace="const buildNumber = '$buildNumber';" --file="$install_dir/src/Common/sources/commondefines.js"
         ynh_replace --match="const buildDate = " --replace="const buildDate = '$( date +%F )';" --file="$install_dir/src/Common/sources/license.js"
     fi
     set_permissions
