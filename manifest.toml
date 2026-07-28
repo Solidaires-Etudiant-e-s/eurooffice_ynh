@@ -2,21 +2,21 @@
 
 packaging_format = 2
 
-id = "onlyoffice"
-name = "OnlyOffice"
+id = "eurooffice"
+name = "Euro-Office"
 description.en = "Create and edit documents collaboratively"
 description.fr = "Créez et éditer des documents collaborativement"
 
-version = "9.4.0~ynh1"
+version = "9.3.2~ynh1"
 
 maintainers = []
 
 [upstream]
 license = "AGPL-3.0-or-later"
-website = "https://www.onlyoffice.com"
-demo = "https://www.onlyoffice.com/fr/download-desktop.aspx"
-code = "https://github.com/ONLYOFFICE/DocumentServer"
-cpe = "cpe:2.3:a:onlyoffice:document_server"
+#website = "https://www.onlyoffice.com"
+#demo = "https://www.onlyoffice.com/fr/download-desktop.aspx"
+code = "https://github.com/Euro-Office/DocumentServer"
+#cpe = "cpe:2.3:a:onlyoffice:document_server"
 
 [integration]
 yunohost = ">= 12.1.39"
@@ -32,8 +32,8 @@ ram.build = "800M"
 ram.runtime = "800M"
 
 [antifeatures]
-arbitrary-limitations.en = "The official OnlyOffice build limits the number of users and open documents. This package recompiles this part according to the AGPLv3 licence, removing these artificial limitations."
-arbitrary-limitations.fr = "La version officielle d'OnlyOffice limite le nombre d'utilisateurs et de documents ouverts. Ce paquet recompile cette partie conformément à la licence AGPLv3, supprimant ainsi ces limitations artificielles."
+arbitrary-limitations.en = "The official Euro-Office build limits the number of users and open documents. This package recompiles this part according to the AGPLv3 licence, removing these artificial limitations."
+arbitrary-limitations.fr = "La version officielle d'Euro-Office limite le nombre d'utilisateurs et de documents ouverts. Ce paquet recompile cette partie conformément à la licence AGPLv3, supprimant ainsi ces limitations artificielles."
 
 [install]
     [install.domain]
@@ -44,16 +44,16 @@ arbitrary-limitations.fr = "La version officielle d'OnlyOffice limite le nombre 
     default = "/"
 
     [install.init_main_permission]
-    help.en = "You will only be able to connect OnlyOffice to your app if both apps are public!"
-    help.fr = "Votre app et OnlyOffice doivent être des applications publiques si vous voulez les connecter !"
+    help.en = "You will only be able to connect Euro-Office to your app if both apps are public!"
+    help.fr = "Votre app et Euro-Office doivent être des applications publiques si vous voulez les connecter !"
     type = "group"
     default = "visitors"
 
     [install.allowed_urls]
-    ask.en = "List of web addresses authorized to integrate the OnlyOffice editor separated by space"
-    ask.fr = "Liste des adresses web autorisées à intégrer l'éditeur OnlyOffice séparées par un espace"
-    help.en = "Install the OnlyOffice connector to edit documents from Nextcloud."
-    help.fr = "Installez le connecteur OnlyOffice pour éditer des documents dans Nextcloud."
+    ask.en = "List of web addresses authorized to integrate the Euro-Office editor separated by space"
+    ask.fr = "Liste des adresses web autorisées à intégrer l'éditeur Euro-Office séparées par un espace"
+    help.en = "Install the Euro-Office connector to edit documents from Nextcloud."
+    help.fr = "Installez le connecteur Euro-Office pour éditer des documents dans Nextcloud."
     type = "string"
     example = "https://cloud.yunohost.domain/nextcloud https://example.com"
     
@@ -64,12 +64,12 @@ arbitrary-limitations.fr = "La version officielle d'OnlyOffice limite le nombre 
     default = true
     yes = true
     no = false
-    help.en = "Disabling this option allows OnlyOffice to accept unauthenticated HTTPS requests, which can be useful if your server is not exposed to the internet and cannot obtain a Let's Encrypt certificate."
-    help.fr = "Désactiver cette option permet à OnlyOffice d'accepter les requêtes HTTPS non authentifiées, ce qui peut être utile si votre serveur n'est pas exposé sur internet et ne peut pas obtenir de certificat Let's Encrypt."
+    help.en = "Disabling this option allows Euro-Office to accept unauthenticated HTTPS requests, which can be useful if your server is not exposed to the internet and cannot obtain a Let's Encrypt certificate."
+    help.fr = "Désactiver cette option permet à Euro-Office d'accepter les requêtes HTTPS non authentifiées, ce qui peut être utile si votre serveur n'est pas exposé sur internet et ne peut pas obtenir de certificat Let's Encrypt."
     
     [install.rebuild_without_limitations]
-    ask.en = "Remove usage limitations by replacing official OnlyOffice binaries"
-    ask.fr = "Supprimer les limites d'usage en remplaçant les binaires officiels d'OnlyOffice"
+    ask.en = "Remove usage limitations by replacing official Euro-Office binaries"
+    ask.fr = "Supprimer les limites d'usage en remplaçant les binaires officiels d'Euro-Office"
     type = "boolean"
     default = 1
     help.en = "Recompile binaries in order to remove usage limitations (number of users, opened documents, smartphone usage). Note: the install and upgrade will be slower."
@@ -78,19 +78,19 @@ arbitrary-limitations.fr = "La version officielle d'OnlyOffice limite le nombre 
 [resources]
 
     [resources.sources.main]
-    amd64.url = "https://github.com/ONLYOFFICE/DocumentServer/releases/download/v9.4.0/onlyoffice-documentserver_amd64.deb"
-    amd64.sha256 = "0860e68c4fecf429b4e13602a4a5ec6945e6ec9f0e9af9867ef0171845aa07df"
-    arm64.url = "https://github.com/ONLYOFFICE/DocumentServer/releases/download/v9.4.0/onlyoffice-documentserver_arm64.deb"
-    arm64.sha256 = "5bbe4194d91b1812020ef9fca25da705212ca9b89f668851ffffecd15b482623"
+    amd64.url = "https://github.com/Euro-Office/DocumentServer/releases/download/v9.3.2/euro-office-documentserver_9.3.1-dev.1_amd64.deb"
+    amd64.sha256 = "sha256:742516fedaeddc52072881c3fe60dcb046db1b1cbdd0a674cda8dd1e4502d380"
+    arm64.url = "https://github.com/Euro-Office/DocumentServer/releases/download/v9.3.2/euro-office-documentserver_9.3.1-dev.1_arm64.deb"
+    arm64.sha256 = "sha256:d548741bc7af52ada79ef9ecbda92fcff5383d5fa66e63769e179fac9f2851b7"
     extract = false
-    rename = "onlyoffice-documentserver.deb"
-    autoupdate.asset.amd64 = "^onlyoffice-documentserver_amd64.deb$"
-    autoupdate.asset.arm64 = "^onlyoffice-documentserver_arm64.deb$"
+    rename = "eurooffice-documentserver.deb"
+    autoupdate.asset.amd64 = "^eurooffice-documentserver_amd64.deb$"
+    autoupdate.asset.arm64 = "^eurooffice-documentserver_arm64.deb$"
     autoupdate.strategy = "latest_github_release"
     
 [resources.sources.src]
-    url = "https://github.com/ONLYOFFICE/server/archive/refs/tags/v9.4.0.131.tar.gz"
-    sha256 = "101f95329d054c3a14728ece8dcc0b63cfc2c1e5b595798732ed02a0e359e11e"
+    url = "https://github.com/Euro-Office/server/archive/refs/tags/v9.3.2.tar.gz"
+    sha256 = "4f18fa2c183c6a53e344a6d0be0bd5fbd7428becca9d3a3a6c7e6ed41e26bb02"
     # Autoupdater disabled because keeps failing everyday, because no tag found after sanity filtering
     # autoupdate.strategy = "latest_github_tag"
     # autoupdate.version_regex = "^v9.*$"

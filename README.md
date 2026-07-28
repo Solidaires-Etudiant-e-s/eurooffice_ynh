@@ -4,40 +4,38 @@ It shall NOT be edited by hand.
 -->
 
 <h1>
-  <img src="https://raw.githubusercontent.com/YunoHost/apps/main/logos/onlyoffice.png" width="32px" alt="Logo of OnlyOffice">
-  OnlyOffice, packaged for YunoHost
+  <img src="https://raw.githubusercontent.com/YunoHost/apps/main/logos/eurooffice.png" width="32px" alt="Logo of Euro-Office">
+  Euro-Office, packaged for YunoHost
 </h1>
 
 Create and edit documents collaboratively
 
-[![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://www.onlyoffice.com)
-[![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://www.onlyoffice.com/fr/download-desktop.aspx)
-[![Version: 9.4.0~ynh1](https://img.shields.io/badge/Version-9.4.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/onlyoffice/)
+[![Version: 9.3.2~ynh1](https://img.shields.io/badge/Version-9.3.2~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/eurooffice/)
 
 <div align="center">
-<a href="https://apps.yunohost.org/app/onlyoffice"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
-<a href="https://github.com/YunoHost-Apps/onlyoffice_ynh/issues"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_report_an_issue.svg"/></a>
+<a href="https://apps.yunohost.org/app/eurooffice"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
+<a href="https://github.com/YunoHost-Apps/eurooffice_ynh/issues"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_report_an_issue.svg"/></a>
 </div>
 
 
 ## Screenshots
-![Screenshot of OnlyOffice](./doc/screenshots/02-document-short.png)
+![Screenshot of Euro-Office](./doc/screenshots/02-document-short.png)
 
 ## 📦 Developer info
 
-[![Automatic tests level](https://apps.yunohost.org/badge/cilevel/onlyoffice)](https://ci-apps.yunohost.org/ci/apps/onlyoffice/)
+[![Automatic tests level](https://apps.yunohost.org/badge/cilevel/eurooffice)](https://ci-apps.yunohost.org/ci/apps/eurooffice/)
 
-🛠️ Upstream OnlyOffice repository: <https://github.com/ONLYOFFICE/DocumentServer>
+🛠️ Upstream Euro-Office repository: <https://github.com/Euro-Office/DocumentServer>
 
-Pull request are welcome and should target the [`testing` branch](https://github.com/YunoHost-Apps/onlyoffice_ynh/tree/testing).
+Pull request are welcome and should target the [`testing` branch](https://github.com/YunoHost-Apps/eurooffice_ynh/tree/testing).
 
 The `testing` branch can be tested using:
 ```
 # fresh install:
-sudo yunohost app install https://github.com/YunoHost-Apps/onlyoffice_ynh/tree/testing
+sudo yunohost app install https://github.com/YunoHost-Apps/eurooffice_ynh/tree/testing
 
 # upgrade an existing install:
-sudo yunohost app upgrade onlyoffice -u https://github.com/YunoHost-Apps/onlyoffice_ynh/tree/testing
+sudo yunohost app upgrade eurooffice -u https://github.com/YunoHost-Apps/eurooffice_ynh/tree/testing
 ```
 
 ### 📚 App packaging documentation
